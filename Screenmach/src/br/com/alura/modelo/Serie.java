@@ -1,0 +1,55 @@
+package br.com.alura.modelo;
+
+public class Serie extends Titulo {
+	
+	private int temporadas;
+	private boolean ativa;
+	private int episodiosPorTemporada;
+	
+	public Serie(String nome, int anoDeLancamento) {
+		super(nome, anoDeLancamento);
+	}
+
+	private int minutosPorEpisodio;
+	
+	
+	
+	public int getTemproradas() {
+		return temporadas;
+	}
+	
+	public void setTemproradas(int temproradas) {
+		this.temporadas = temproradas;
+	}
+	
+	public  boolean isAtiva() {
+		return ativa;
+	}
+	
+	public void setAtiva(boolean ativa) {
+		this.ativa = ativa;
+	}
+	
+	private int getEpisodio() {
+		return episodiosPorTemporada;
+	}
+	
+	public void setEpisodiosPorTemporada(int episodiosPorTemporada) {
+		this.episodiosPorTemporada = episodiosPorTemporada;
+	}
+	
+	public int getMinutosPorEpisodio() {
+		return minutosPorEpisodio;
+	}
+	
+	public void setMinutosPorEpisodio(int minutosPorEpisodio) {
+		this.minutosPorEpisodio = minutosPorEpisodio;
+	}
+
+	@Override
+	public int getDuracaoEmMinutos() {
+		return temporadas * episodiosPorTemporada * minutosPorEpisodio;
+	}
+		
+}
+	
